@@ -21,7 +21,7 @@ http {
 	
 	upstream apps{
 	    {{range service "app-ghost"}}
-        server {{.ServiceAddress}}:{{.Port}};{{end}}
+        server {{.Address}}:{{.Port}};{{end}}
     }
 	server {
 		listen 80 default_server;
