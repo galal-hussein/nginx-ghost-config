@@ -20,7 +20,7 @@ http {
 	error_log /var/log/nginx/error.log;
 	
 	upstream apps{
-	    {{range service "app-ghost"}}
+	    {{range service "ghost"}}
         server {{.Address}}:{{.Port}};{{end}}
     }
 	server {
